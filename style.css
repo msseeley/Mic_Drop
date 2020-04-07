@@ -1,3 +1,12 @@
+:root{
+  --main-menu-hvr-bg-color:  rgb(226, 167, 39);
+  --main-menu-hvr-txt-color: #fff;
+  --main-txt-color: #333;
+  --main-bg-color: #f4f4f4;
+  --dropdown-bg-color:#e7e7e7;
+  --dropdown-menu-hvr-bg-color: #e0e0e0;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -7,7 +16,7 @@
 html,
 body{
   font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
+  background: var(--main-bg-color);
 }
 
 #navbar ul{
@@ -15,15 +24,16 @@ body{
 }
 
 #navbar ul li {
-  color:#333;
+  color:var(--main-txt-color);
   display: inline-block;
   padding: 1rem;
   position: relative;
 }
 
+
 #navbar ul li a{
   text-decoration: none;
-  padding: .25rem;
+  padding-right: .5rem;
   color: inherit;
 }
 
@@ -32,3 +42,34 @@ body{
 #navbar ul li ul{
   display:none;
 }
+
+#navbar ul li:hover{
+  cursor: pointer;
+  background: var(--main-menu-hvr-bg-color);
+  color: var(--main-menu-hvr-txt-color);
+}
+
+
+/* View Nested Items on Hover */
+
+#navbar ul li:hover ul{
+  display:block;
+  position: absolute;
+  left:0;
+  width: 200px;
+  margin-top:1rem;
+}
+
+#navbar ul li:hover ul li{
+  display:block;
+  background: var(--dropdown-bg-color);
+}
+
+#navbar ul li:hover ul li a{
+  color: var(--main-txt-color);
+}
+
+#navbar ul li:hover ul li:hover{
+  background: var(--dropdown-menu-hvr-bg-color);
+}
+
