@@ -73,3 +73,16 @@ body{
   background: var(--dropdown-menu-hvr-bg-color);
 }
 
+#navbar ul li:hover ul li span{
+  float: right;
+  background: var(--main-menu-hvr-bg-color);
+  color: var(--main-menu-hvr-txt-color);
+  border-radius: 5px;
+  padding: .2rem 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+#navbar ul li:hover ul li:hover span{
+  background-color:rgb(126, 167, 44);
+}
