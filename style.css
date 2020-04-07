@@ -86,3 +86,13 @@ body{
 #navbar ul li:hover ul li:hover span{
   background-color:rgb(126, 167, 44);
 }
+
+@media(max-width:600px){
+  #navbar ul li{
+    display: block;
+  }
+  #navbar ul li:hover ul{
+    width:100%;
+    position:relative;
+  }
+}
